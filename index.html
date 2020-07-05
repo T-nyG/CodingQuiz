@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3" id="highScoreDiv">
+          <p><a href="scores.html"> Highscores</a></p>
+        </div>
+        <div class="col-md-3"></div>
+        <div class="col-md-3"></div>
+        <div class="col-md-3">
+          <div id="timeTxt">Timer: <span id="time">75</span></div>
+        </div>
+      </div>
+      <div id="quizArea">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="start">
+              <h1>Coding Quiz Challenge</h1>
+              <br />
+              <p1>Complete the quiz and acheieve a high score!</p1>
+              <p2>
+                Race the timer at the top of the screen to answer as many
+                questions correctly as you can! Each correct answer will add
+                more time, whereas wrong answers will deduct time. Your final
+                score will be based on how many answers were correct and how
+                quickly you are able to complete the quiz!
+              </p2>
+            </div>
+            <div id="question-container" class="hide">
+              <h2 id="quizQuestion"></h2>
+              <ul id="answers" class="answers">
+                <li id="answer1" class="answer"></li>
+                <li id="answer2" class="answer"></li>
+                <li id="answer3" class="answer"></li>
+                <li id="answer4" class="answer"></li>
+              </ul>
+            </div>
+            <div class="hide right-wrong"></div>
+            <br />
+            <button type="button" class="startUp btn btn-lg btn-secondary">
+              Start
+            </button>
+            <br />
+            <br />
+          </div>
+        </div>
+      </div>
+      <div id="gameOver" class="hide">
+        <h1>Game Over</h1>
+        <p>
+          Your score is <span id="finalScoreEl"></span>.<br />
+          Enter your initials here.
+        </p>
+        <input type="text" id="initialEnter" max="3" value="" /><input
+          type="submit"
+          id="subBtn"
+        />
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
